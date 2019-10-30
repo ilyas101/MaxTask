@@ -1,13 +1,13 @@
-package ru.karimov.pallindrome;
+package ru.karimov.palindrome;
 
-import ru.karimov.pallindrome.service.GameSeans;
+import ru.karimov.palindrome.service.GameService;
 
 /**
  * Created by 777 on 02.10.2019.
  */
 public class StartApp {
     public  static void main(String[] args) {
-        GameSeans seans = new GameSeans();
+        GameService seans = new GameService();
         seans.tryWord("fhf", "1");
         seans.tryWord("fhffhf", "3");
         seans.tryWord("fhfff", "2");

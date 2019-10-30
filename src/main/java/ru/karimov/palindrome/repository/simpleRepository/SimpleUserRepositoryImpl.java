@@ -1,7 +1,7 @@
-package ru.karimov.pallindrome.repository.simpleRepository;
+package ru.karimov.palindrome.repository.simpleRepository;
 
-import ru.karimov.pallindrome.model.User;
-import ru.karimov.pallindrome.repository.UserRepository;
+import ru.karimov.palindrome.model.User;
+import ru.karimov.palindrome.repository.UserRepository;
 
 import java.util.*;
 
@@ -10,9 +10,9 @@ import java.util.*;
  */
 public class SimpleUserRepositoryImpl implements UserRepository {
 
-    private TreeSet<User> users = new TreeSet<>(new UserComparator2());
+    private TreeSet<User> users = new TreeSet<>(new UserComparatorByName());
 
-    class UserComparator implements Comparator<User> {
+    class UserComparatorByPoints implements Comparator<User> {
         public int compare(User a, User b){
             if(a.getPoins()> b.getPoins())
                 return -1;
@@ -23,7 +23,7 @@ public class SimpleUserRepositoryImpl implements UserRepository {
         }
     }
 
-    class UserComparator2 implements Comparator<User> {
+    class UserComparatorByName implements Comparator<User> {
         public int compare(User a, User b){
             return a.getName().compareTo(b.getName());
         }
@@ -42,7 +42,7 @@ public class SimpleUserRepositoryImpl implements UserRepository {
     public TreeSet<User> findLeaders() {
         Iterator<User> it = users.iterator();
         int i = 0;
-        TreeSet<User> current = new TreeSet<>(new UserComparator());
+        TreeSet<User> current = new TreeSet<>(new UserComparatorByPoints());
         while (it.hasNext() && i < 5) {
             current.add(it.next());
             i++;

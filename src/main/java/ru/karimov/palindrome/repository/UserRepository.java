@@ -1,6 +1,6 @@
-package ru.karimov.pallindrome.repository;
+package ru.karimov.palindrome.repository;
 
-import ru.karimov.pallindrome.model.User;
+import ru.karimov.palindrome.model.User;
 
 import java.util.TreeSet;
 

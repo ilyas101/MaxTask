@@ -1,4 +1,4 @@
-package ru.karimov.pallindrome.model;
+package ru.karimov.palindrome.model;
 
 import java.util.HashSet;
 
@@ -39,20 +39,8 @@ public class User  {
         this.pallindromes = pallindromes;
     }
 
-    /*@Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        return name.equals(user.name);
-
-    }
-
     @Override
-    public int hashCode() {
-        return name.hashCode();
-    }*/
-
+    public String toString() {
+        return "User{" + "poins=" + poins + ", name='" + name + '\'' + '}';
+    }
 }

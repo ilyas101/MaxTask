@@ -1,11 +1,14 @@
-package ru.karimov.pallindrome.service;
+package ru.karimov.palindrome.util.palindromChecker;
+
+import ru.karimov.palindrome.util.IPalindromeChecker;
 
 /**
  * Created by 777 on 02.10.2019.
  */
-public class PallindromeChecker {
+public class PalindromeChecker implements IPalindromeChecker{
 
-    public boolean isPallindrome(String word) {
+    @Override
+    public boolean isPalindrome(String word) {
         String clean = word.replaceAll("\\s","").toLowerCase();
         int n = clean.length();
         for (int i = 0; i < n/2; ++i) {
