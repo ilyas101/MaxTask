@@ -22,11 +22,7 @@ public class GameService {
                 user = new User(nameUser);
                 saveUser(user);
             }
-            if (!user.getPallindromes().contains(word)) {
-                user.getPallindromes().add(word);
-                user.setPoins(user.getPoins() + word.length());
-                saveUser(user);
-            }
+            addPalindromeToUser(user, word);
         }
     }
 
@@ -40,5 +36,13 @@ public class GameService {
 
     public TreeSet<User> findLeaders() {
         return userRepository.findLeaders();
+    }
+
+    private void addPalindromeToUser(User user, String palindrome) {
+        if (!user.getPallindromes().contains(palindrome)) {
+            user.getPallindromes().add(palindrome);
+            user.setPoins(user.getPoins() + palindrome.length());
+            saveUser(user);
+        }
     }
 }
