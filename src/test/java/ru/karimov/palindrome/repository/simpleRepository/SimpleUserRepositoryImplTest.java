@@ -33,13 +33,21 @@ public class SimpleUserRepositoryImplTest {
     }
 
     @Test
-    public void findLeaders_userBobsShouldFirst_true() {
+    public void shouldFindBobAsLeader() {
         TreeSet<User> leaderSet = simpleUserRepository.findLeaders();
         assertTrue("Bobs".equals(leaderSet.first().getName()));
     }
 
     @Test
-    public void findUserByName_validUser_notNull() {
+    public void shouldFindUser() {
         assertNotNull(simpleUserRepository.findUserByName("Bobik"));
+    }
+
+    @Test
+    public void shouldSaveUser() {
+        User userTest = new User("Test");
+        userTest.setPoins(0);
+        simpleUserRepository.save(userTest);
+        assertNotNull(simpleUserRepository.findUserByName("Test"));
     }
 }
