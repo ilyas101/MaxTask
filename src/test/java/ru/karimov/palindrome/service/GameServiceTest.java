@@ -1,7 +1,6 @@
-package ru.karimov.palindrome.palindrome;
+package ru.karimov.palindrome.service;
 
 import org.junit.Test;
-import ru.karimov.palindrome.service.GameService;
 
 import static org.junit.Assert.*;
 
