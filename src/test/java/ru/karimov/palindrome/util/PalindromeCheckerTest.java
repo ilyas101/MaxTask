@@ -11,13 +11,13 @@ public class PalindromeCheckerTest {
     PalindromeChecker palindromeChecker = new PalindromeChecker();
 
     @Test
-    public void isPalindrome_validPalindrome_true() throws Exception {
+    public void shouldVerifyValidPalindrome() throws Exception {
         String testValid = "asd f dsa";
         assertTrue("The phrase must be a palindrome", palindromeChecker.isPalindrome(testValid));
     }
 
     @Test
-    public void isPalindrome_notValidPalindrome_false() throws Exception {
+    public void shouldNotVerifyNotValidPalindrome() throws Exception {
         String testNotValid = "asd f dsa1";
         assertFalse("The phrase should not be a palindrome", palindromeChecker.isPalindrome(testNotValid));
     }
