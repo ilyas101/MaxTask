@@ -19,21 +19,27 @@ public class SimpleUserRepositoryImplTest {
         User user2 = new User("Bober");
         user2.setPoins(2);
         User user3 = new User("Bobs");
-        user3.setPoins(10);
+        user3.setPoins(20);
         User user4 = new User("Bobik");
         user4.setPoins(1);
         User user5 = new User("Boba");
         user5.setPoins(9);
+        User user6 = new User("Bobat");
+        user6.setPoins(19);
+        User user7 = new User("Bobak");
+        user7.setPoins(15);
 
         simpleUserRepository.save(user1);
         simpleUserRepository.save(user2);
         simpleUserRepository.save(user3);
         simpleUserRepository.save(user4);
         simpleUserRepository.save(user5);
+        simpleUserRepository.save(user6);
+        simpleUserRepository.save(user7);
     }
 
     @Test
-    public void shouldFindBobAsLeader() {
+    public void shouldFindBobsAsLeader() {
         TreeSet<User> leaderSet = simpleUserRepository.findLeaders();
         assertTrue("Bobs".equals(leaderSet.first().getName()));
     }
