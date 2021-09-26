@@ -12,7 +12,7 @@ public class User  {
     }
 
     private String name;
-    private int poins = 0;
+    private int points = 0;
     private HashSet<String> pallindromes = new HashSet<>();
 
     public String getName() {
@@ -23,12 +23,12 @@ public class User  {
         this.name = name;
     }
 
-    public int getPoins() {
-        return poins;
+    public int getPoints() {
+        return points;
     }
 
-    public void setPoins(int poins) {
-        this.poins = poins;
+    public void setPoints(int points) {
+        this.points = points;
     }
 
     public HashSet<String> getPallindromes() {
@@ -41,6 +41,6 @@ public class User  {
 
     @Override
     public String toString() {
-        return "User{" + "poins=" + poins + ", name='" + name + '\'' + '}';
+        return "User{" + "points=" + points + ", name='" + name + '\'' + '}';
     }
 }

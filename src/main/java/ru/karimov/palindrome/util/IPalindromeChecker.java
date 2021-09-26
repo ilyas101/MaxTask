@@ -5,9 +5,9 @@ package ru.karimov.palindrome.util;
  */
 public interface IPalindromeChecker {
     /**
-     * Checking that word or phrase is palindrome
-     * @param word verifiable word or phrase
-     * @return true if word or phrase is palindrome and false if vice versa
+     * Проверка, что слово или фраза являются палиндромом
+     * @param word - проверяемое слово или фраза
+     * @return true, если слово или фраза это палиндром и false, если нет
      */
     boolean isPalindrome(String word);
 }

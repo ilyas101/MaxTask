@@ -1,4 +1,4 @@
-package ru.karimov.palindrome.util.palindromChecker;
+package ru.karimov.palindrome.util;
 
 import ru.karimov.palindrome.util.IPalindromeChecker;
 

@@ -10,21 +10,21 @@ import java.util.TreeSet;
 public interface UserRepository {
 
     /**
-     * Retrieve an User from the data store by id.
-     * @param id the id to search for
-     * @return the User if found
+     * Возвращает юзера по его id
+     * @param id - id юзера
+     * @return - найденный юзер
      */
     User findUserByName(String name);
 
     /**
-     * Save an User to the data store, either inserting or updating it.
-     * @param user the User to save
+     * сохраняет юзера
+     * @param user - юзер, кот. необходимо сохранить
      */
     void save(User user);
 
     /**
-     * Find top5 games leaders
-     * @return games leaders
+     * Поиск топ-5 лидеров игры
+     * @return - лидеры игры
      */
     TreeSet<User> findLeaders();
 }
